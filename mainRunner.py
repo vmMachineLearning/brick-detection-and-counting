@@ -1,7 +1,7 @@
 import cv2
 
 # Load image, grayscale, blur, Otsu's threshold
-image = cv2.imread('data/images/savior12345.jpeg')
+image = cv2.imread('data/images/savior.jpg')
 # print(image)
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 blur = cv2.GaussianBlur(gray, (3, 3), 0)
