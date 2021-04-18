@@ -23,7 +23,7 @@ We implemented the above goal in `openCV` and `python`.
 #### Steps:
 1. Read the image from images directory.
 
-![Image](data/images/test5.jpg)
+![Image](data/img/img.png)
 
 2. Convert the image to **[gray-scale](https://docs.opencv.org/3.4/d8/d01/group__imgproc__color__conversions.html#gga4e0972be5de079fed4e3a10e24ef5ef0a353a4b8db9040165db4dacb5bcefb6ea)** which will be handy in further processing of the image.
 
