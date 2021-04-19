@@ -5,10 +5,15 @@ from skimage.filters import threshold_local
 from skimage import measure
 
 
-def countBricks(image, cannyThreshMin, cannyThreshMax, kernelSize):
+def countBricks(imageURL, kernelSize):
+    image = cv2.imread(imageURL)
+    print("Height: {},Width: {}".format(*image.shape[:2]))
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    # high_thresh, thresh_im = cv2.threshold(
+    # gray, 0, 255, cv2.THRESH_OTSU)
+    # lowThresh = 0.5 * high_thresh
     blurred = cv2.bilateralFilter(gray, 21, 41, 41)
-    edged = cv2.Canny(blurred, cannyThreshMin, cannyThreshMax,
+    edged = cv2.Canny(blurred, 60, 220,
                       apertureSize=3)
     # 30, 190 --> pot
     # 60, 220 --> guber
