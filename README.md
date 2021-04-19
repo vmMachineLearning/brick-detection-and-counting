@@ -9,7 +9,6 @@ conda activate yolov4-cpu
 ```
 ### Pip
 ```bash
-# TensorFlow CPU
 pip install -r requirements.txt
 ```
 
@@ -44,9 +43,20 @@ We implemented the above goal in `openCV` and `python`.
 ![BITWISE AND](data/img/bitAndBtwmaskAndThresh.png)
 
 8. This was one of the most challenging step in the project since the bricks which are very closely packed, it is very difficult to count them as a single unit. Therefore, it is very important to open their connections. For this reason we applied **morphological operations.**
+
+
    8.1. Create a structuring element and choose a proper kernel size according to the input image.
    8.2. Apply **[morphologyEx](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html#opening)**.
 
    ![MORPH IMAGE](data/img/morph.png)
    
 9.  Finally, apply the method to find contours which gives us the number of bricks in an image. Definitely, this count is not very accurate therefore we implemented **connected component analysis** in order to get near accurate results.
+
+## Further Work
+**[TO ADD]**
+
+**REFERENCES:**
+
+1. **[Real-Time_Brick_Counting_for_Construction_Progress_Monitoring](https://www.researchgate.net/publication/268471266_Real-Time_Brick_Counting_for_Construction_Progress_Monitoring)**
+2. **[count-the-number-of-rectangles-in-an-image](https://stackoverflow.com/questions/60569457/count-the-number-of-rectangles-in-an-image)**
+3. **[Automated_Brick_Counting_for_Facade_Construction_Progress_Estimation](https://www.researchgate.net/publication/269573747_Automated_Brick_Counting_for_Facade_Construction_Progress_Estimation)**
